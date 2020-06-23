@@ -4,13 +4,15 @@ on server and for deployment on Heroku. After deployment, you will access your
 app everywhere if you have an internet connection.
 
 ## How To Run
-If you clone this repository make sure that:
-1. Node.js installed, below is a link to official web page
+After cloning this repository you need to:
+1. Install Node.js, below is a link to official web page
 2. Run **npm install** inside you terminal
 3. Rename ~~.env-sample~~ to **.env**
 4. Inside **.env** add:
-  - DOMAIN="ws://websocketdev.rtw.no/DOMAIN/SERVICE/INSTANCE/channel"
-  - TOKEN="aToken_XXXXXXXXXXXXXXXXXX"
+```
+DOMAIN="ws://websocketdev.rtw.no/DOMAIN/SERVICE/INSTANCE/channel"
+TOKEN="aToken_XXXXXXXXXXXXXXXXXX"
+```
 5. Run **npm run start** inside you terminal
 6. Add link that you get inside the browser
 
