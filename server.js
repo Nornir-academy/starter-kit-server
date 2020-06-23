@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-server.listen(port, () => {console.log(`App running on port ${port}`)})
+server.listen(port, () => {console.log(`App running on localhost:${port}`)})
 
 // Connection
 const WebSocket = require('ws')
