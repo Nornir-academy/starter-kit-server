@@ -26,16 +26,16 @@ function batteryPercent(battery) {
   return battery / 3.7 * 100;
 }
 
-lightOff.addEventListener('click', function() {
+lightOff.addEventListener('click', () => {
   lightOn.classList.remove('btn-info', 'active');
   lightOn.classList.add('btn-outline-info');
-  this.classList.remove('btn-outline-info');
-  this.classList.add('btn-info', 'active');
+  lightOff.classList.remove('btn-outline-info');
+  lightOff.classList.add('btn-info', 'active');
 });
 
-lightOn.addEventListener('click', function() {
+lightOn.addEventListener('click', () => {
   lightOff.classList.remove('btn-info', 'active');
   lightOff.classList.add('btn-outline-info');
-  this.classList.remove('btn-outline-info');
-  this.classList.add('btn-info', 'active');
+  lightOn.classList.remove('btn-outline-info');
+  lightOn.classList.add('btn-info', 'active');
 });
