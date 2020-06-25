@@ -10,20 +10,21 @@ socket.on('message', (data) => {
   const message = data.RTW.STRING;
   const battery = data.RTW.BATTERY;
   printMessage(message);
-  batteryLife(battery);
+  batteryPercent(battery);
 });
 
 function printMessage(message) {
   messageElement.textContent = message;
 }
 
-function batteryLife(battery) {
-  batteryNumberElement.textContent = batteryPercent(battery) + "%";
-  batteryProgressElement.style.width = batteryPercent(battery) + "%";
+function batteryPercent(battery) {
+  const percent = battery / 3.7 * 100;
+  batteryLife(percent);
 }
 
-function batteryPercent(battery) {
-  return battery / 3.7 * 100;
+function batteryLife(percent) {
+  batteryNumberElement.textContent = percent + "%";
+  batteryProgressElement.style.width = percent + "%";
 }
 
 lightOff.addEventListener('click', () => {
