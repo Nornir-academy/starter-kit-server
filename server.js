@@ -23,7 +23,7 @@ const token = process.env.TOKEN;
 const wsChannel = new WebSocket(channel);
 
 // Send token when WebSocket connected
-wsChannel.on('open', function open() {
+wsChannel.on('open', function() {
   console.log('Connected to WebSocket!');
   wsChannel.send(`{"token":"${token}"}`);
   console.log('Token has been sendt');
