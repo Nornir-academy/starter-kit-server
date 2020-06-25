@@ -27,19 +27,15 @@ function batteryPercent(battery) {
 }
 
 lightOff.addEventListener('click', function() {
-  lightOn.parentElement.classList.remove('btn-info', 'active');
-  lightOn.parentElement.classList.add('btn-outline-info');
-  this.parentElement.classList.remove('btn-outline-info');
-  this.parentElement.classList.add('btn-info', 'active');
-  lightOn.removeAttribute('checked', '');
-  lightOff.setAttribute('checked', '');
+  lightOn.classList.remove('btn-info', 'active');
+  lightOn.classList.add('btn-outline-info');
+  this.classList.remove('btn-outline-info');
+  this.classList.add('btn-info', 'active');
 });
 
 lightOn.addEventListener('click', function() {
-  lightOff.parentElement.classList.remove('btn-info', 'active');
-  lightOff.parentElement.classList.add('btn-outline-info');
-  this.parentElement.classList.remove('btn-outline-info');
-  this.parentElement.classList.add('btn-info', 'active');
-  lightOff.removeAttribute('checked', '');
-  lightOn.setAttribute('checked', '');
+  lightOff.classList.remove('btn-info', 'active');
+  lightOff.classList.add('btn-outline-info');
+  this.classList.remove('btn-outline-info');
+  this.classList.add('btn-info', 'active');
 });
